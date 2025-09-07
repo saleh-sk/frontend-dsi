@@ -1,4 +1,4 @@
 const variables={
-    apiUrl:"https://scanned-stuffed-myrtle-divine.trycloudflare.com/api/"
+    apiUrl:"https://appreciate-harrison-si-engagement.trycloudflare.com/api/"
 }
 export default variables;
