@@ -10,12 +10,12 @@ const ProtectedRoute = ({ children }) => {
     const validate = async () => {
       try {
         const authUserString = sessionStorage.getItem("authUser");
+
         if (!authUserString) {
           setIsValid(false);
           return;
         }
         const authUser = JSON.parse(authUserString);
-
         await axios.get(variables.apiUrl + "authentication/validate", {
           headers: { Authorization: `Bearer ${authUser.token}` },
         });
@@ -29,7 +29,7 @@ const ProtectedRoute = ({ children }) => {
     validate();
   }, []);
 
-  if (isValid === null) return <div>Validating session...</div>;
+  if (isValid === null) return <div>Checking your passport...</div>;
   if (!isValid) return <Navigate to="/" replace />;
   return children;
 };

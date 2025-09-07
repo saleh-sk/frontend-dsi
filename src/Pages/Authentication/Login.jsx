@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import variables from "../../../variables";
+import { validateEmail,validatePassword } from "../../Utils/FieldsValidator";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [error,setError]=useState();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,6 +20,16 @@ export default function Login() {
   };
 
   const handleSubmit = async (e) => {
+    if (!validateEmail(formData.email)) {
+      setError("Try again using a correct format for your email");
+      return;
+    }
+
+    if (!validatePassword(formData.password)) {
+      setError("Try again using a correct format for your password");
+      return;
+    }
+
     e.preventDefault();
     const endpoint = variables.apiUrl + "authentication/login";
 
@@ -73,6 +85,7 @@ export default function Login() {
           />
         </div>
         <button type="submit">Login</button>
+        <div className="errorMsg">{error}</div>
       </form>
     </div>
   );
