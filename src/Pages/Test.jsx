@@ -10,7 +10,6 @@ const Test = () => {
   <>
 
   {authUser.token}
-
   <Logout/>
   </>
 )};
