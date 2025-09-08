@@ -1,5 +1,5 @@
 const variables={
-    apiUrl:"https://appreciate-harrison-si-engagement.trycloudflare.com/api/"
+    apiUrl:"https://albany-same-continent-sports.trycloudflare.com/api/"
 }
 export default variables;
 

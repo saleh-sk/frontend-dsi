@@ -1,6 +1,6 @@
 export const sanitizeInput = (value) => {
   console.log(value);
-  return value.replace(/[^a-zA-Z0-9@._!#$%^&*()-]/g, "");
+  return value.replace(/[^a-zA-Z0-9 @._!#$%^&*()-]/g, "");
 };
 
 export const validateEmail = (email) => {
