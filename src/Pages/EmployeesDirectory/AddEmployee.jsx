@@ -104,15 +104,15 @@ const EmployeeForm = () => {
     <div className="masterContainer">
       <div className="formContainer">
         <form onSubmit={handleSubmit}>
-          <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required />
-          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" required />
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
-          <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" />
-          <input type="text" name="nationality" value={formData.nationality} onChange={handleChange} placeholder="Nationality" />
-          <input type="number" name="salary" value={formData.salary} onChange={handleChange} placeholder="Salary" />
-          <input type="text" name="previousPosition" value={formData.previousPosition} onChange={handleChange} placeholder="Previous Position" />
-          <input type="text" name="currentPosition" value={formData.currentPosition} onChange={handleChange} placeholder="Current Position" />
-          <input type="text" name="department" value={formData.department} onChange={handleChange} placeholder="Department" />
+          <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Full Name" required /><br/>
+          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" required /><br />
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required /><br />
+          <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Address" /><br />
+          <input type="text" name="nationality" value={formData.nationality} onChange={handleChange} placeholder="Nationality" /><br />
+          <input type="number" name="salary" value={formData.salary} onChange={handleChange} placeholder="Salary" /><br />
+          <input type="text" name="previousPosition" value={formData.previousPosition} onChange={handleChange} placeholder="Previous Position" /><br />
+          <input type="text" name="currentPosition" value={formData.currentPosition} onChange={handleChange} placeholder="Current Position" /><br />
+          <input type="text" name="department" value={formData.department} onChange={handleChange} placeholder="Department" /><br />
           <button type="submit">{mode === "add" ? "Add Employee" : "Update Employee"}</button>
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>}
