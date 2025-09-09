@@ -7,7 +7,6 @@ const UserHelper = {
     const user = UserHelper.getAuthUser();
     return user?.token;
   }
-  
 };
 
 export default UserHelper;

@@ -50,7 +50,7 @@ const Test = () => {
   </div>
 
 
-  <Dock 
+  <Dock
     items={items}
     panelHeight={68}
     baseItemSize={50}
