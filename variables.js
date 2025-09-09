@@ -1,5 +1,5 @@
 const variables={
-    apiUrl:"https://.trycloudflare.com/api/"
+    apiUrl:"https://apply-innovation-thread-animation.trycloudflare.com/api/"
 }
 export default variables;
 
