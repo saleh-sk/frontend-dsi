@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Login from './Pages/Authentication/Login'
 import Test from './Pages/Test';

@@ -4,11 +4,20 @@ import { NavLink, Routes, Route } from 'react-router-dom';
 import AddEmployee from "../Pages/EmployeesDirectory/AddEmployee";
 import ViewEmployee from "../Pages/EmployeesDirectory/ViewEmployees";
 import AddTeam from "../Pages/TeamDirectory/AddTeam";
+import { VscAccount } from "react-icons/vsc";
+
 const Test = () => {
 
 
   // const authUserString = sessionStorage.getItem("authUser");
   // const authUser = JSON.parse(authUserString);
+  const items = [
+  { icon: <VscHome size={18} />, label: 'Home', onClick: () => alert('Home!') },
+  { icon: <VscAccount size={18} />, label: 'Archive', onClick: () => alert('Archive!') },
+  { icon: <VscAccount size={18} />, label: 'Profile', onClick: () => alert('Profile!') },
+  { icon: <VscSettingsGear size={18} />, label: 'Settings', onClick: () => alert('Settings!') },
+];
+
   return (
   <>
     {/* {authUser.token} */}
@@ -38,6 +47,14 @@ const Test = () => {
         </Routes>
   <Logout/>
   </div>
+
+
+  <Dock 
+    items={items}
+    panelHeight={68}
+    baseItemSize={50}
+    magnification={70}
+  />
   </>
 )};
 export default Test;

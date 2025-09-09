@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import variables from "../../../variables";
-import { validateEmail,validatePassword } from "../../Utils/FieldsValidator";
+import { validateEmail, validatePassword } from "../../Utils/FieldsValidator";
+import TextType from "../../Components/TextType";
+import {
+  VscHome,
+  VscArchive,
+  VscAccount,
+  VscSettingsGear,
+} from "react-icons/vsc";
+import Dock from "../../Components/Dock";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [error,setError]=useState();
+  const [error, setError] = useState();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -58,10 +66,16 @@ export default function Login() {
         console.log("Error: " + error.message);
       }
     }
-  };
-
+  }
   return (
     <div>
+      <TextType
+        text={["Your Vision, Our Code..."]}
+        typingSpeed={100}
+        pauseDuration={1500}
+        showCursor={true}
+        cursorCharacter="|"
+      />
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
         <div>
