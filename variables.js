@@ -1,5 +1,5 @@
 const variables={
-    apiUrl:"https://apply-innovation-thread-animation.trycloudflare.com/api/"
+    apiUrl:"https://naval-retrieved-mainly-institution.trycloudflare.com/api/"
 }
 export default variables;
 

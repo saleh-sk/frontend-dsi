@@ -6,6 +6,7 @@ import ViewEmployee from "../Pages/EmployeesDirectory/ViewEmployees";
 import AddTeam from "../Pages/TeamDirectory/AddTeam";
 import Dock from '../Components/Dock';
 import { VscHome, VscArchive, VscAccount, VscSettingsGear } from "react-icons/vsc";
+import AssignEmployeeTeam from "./TeamDirectory/AssignEmployeeTeam";
 
 const Test = () => {
 
@@ -27,6 +28,7 @@ const Test = () => {
                 { name: 'Add Employee', to: '/AddEmployee' },
                 { name: 'View Employee', to: '/ViewEmployees' },
                 { name: 'Add Team', to: '/AddTeam' },
+                { name: 'Assign Employees', to: '/AssignEmployeeTeam' },
               ].map(({ name, to }) => (
                 <li key={name}>
                   <NavLink
@@ -45,6 +47,7 @@ const Test = () => {
         <Routes>
           <Route path="/AddEmployee" element={<AddEmployee />} />
           <Route path="/ViewEmployee" element={<ViewEmployee />} />
+          <Route path="/AssignEmployeeTeam" element={<AssignEmployeeTeam />} />
         </Routes>
   <Logout/>
   </div>

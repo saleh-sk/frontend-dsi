@@ -4,13 +4,6 @@ import axios from "axios";
 import variables from "../../../variables";
 import { validateEmail, validatePassword } from "../../Utils/FieldsValidator";
 import TextType from "../../Components/TextType";
-import {
-  VscHome,
-  VscArchive,
-  VscAccount,
-  VscSettingsGear,
-} from "react-icons/vsc";
-import Dock from "../../Components/Dock";
 
 export default function Login() {
   const navigate = useNavigate();
