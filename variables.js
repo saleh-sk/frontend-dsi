@@ -1,5 +1,5 @@
 const variables={
-    apiUrl:"https://naval-retrieved-mainly-institution.trycloudflare.com/api/"
+    apiUrl:"https://then-transmitted-offline-contribute.trycloudflare.com/api/"
 }
 export default variables;
 
